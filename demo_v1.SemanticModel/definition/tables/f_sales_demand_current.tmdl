@@ -337,7 +337,7 @@ table f_sales_demand_current
 		source =
 				let
 				    Source = Value.NativeQuery(Databricks.Catalogs("adb-2186712216710513.13.azuredatabricks.net", "/sql/1.0/warehouses/ec095c6cff2c0f9f", [Catalog="devcurated", Database=null, EnableAutomaticProxyDiscovery=null]){[Name="devcurated",Kind="Database"]}[Data], "select * from datawarehouse.f_sale_demand_forecast_current limit 10", null, [EnableFolding=true]),
-				    #"Added Custom" = Table.AddColumn(Source, "Custom", each 33*1000)
+				    #"Added Custom" = Table.AddColumn(Source, "Custom", each 44*1000)
 				in
 				    #"Added Custom"
 
